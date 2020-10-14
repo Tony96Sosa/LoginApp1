@@ -1,11 +1,23 @@
 .Login-container{
-    width: 80%;
-    border-radius: 20px;
-    border: 2px solid black;
-    padding: 20px;
-    margin: auto;
+    width: 90%;
+    height: 450px;
+    border: 1px solid seashell;
+    border-radius: 10px;
+}
+.login-boton{
+    width: 100%;
+    padding: 20px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+}
+.login-boton button{
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    color: seashell;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }

@@ -28,7 +28,7 @@ const Login = () => {
     const ifMatch = (param) => {
         const { user, password } = param;
         if(user > 0 && password > 0){
-            if(user === 'Carolina' && password === '123456'){
+            if(user === 'usuario' && password === '123456'){
                 let ac = { user, password };
                 let account = JSON.stringify(ac);
                 localStorage.setItem('account', account);
@@ -48,41 +48,47 @@ const Login = () => {
             ifMatch(account);
         }
     }
+
+    const usuario = {
+        id: 'usuario',
+        name: 'usuario',
+        placeholder: 'Ingrese un Usuario',
+        type: 'text',
+    };
+    const clave = {
+        id: 'contraseña',
+        name: 'contraseña',
+        placeholder: 'Ingrese una Contraseña',
+        type: 'password',
+    };
+
     return(
         <div className='Login-container'>
-         <Title text='¡Bienvenido!'/>
-         { hasError &&
-            <label className='label-alert'>
-                Ingreso una contraseña o usuario incorrecto!!!
-            </label>
-         }
-         <Label text='Usuario'/>
-         <Input 
-            atribbute={{
-                id: 'usuario',
-                name: 'usuario',
-                placeholder: 'Ingrese un Usuario',
-                type: 'text',
-            }}
-            handleChange={handleChange} />
-         <Label text='Contraseña'/>
-         <Input 
-            atribbute={{
-                id: 'contraseña',
-                name: 'contraseña',
-                placeholder: 'Ingrese una Contraseña',
-                type: 'password',
-            }}
-            handleChange={handleChange}
-            param={passwordError} />
-            { passwordError && 
-                <label className='label-error'>
-                    Contraseña incompleta minimo 6 caracteres!
-                </label>
+            <Title text='¡Bienvenido!'/>
+            { hasError &&
+                <Label 
+                    text='¡¡¡Ingreso una contraseña o usuario incorrecto!!!' 
+                    estilo='label-error'/>
             }
-            <button onClick={handleSubmit}>
-                Ingresar
-            </button>
+            <Label text='Usuario' estilo='Label-text'/>
+            <Input 
+                atribbute={usuario}
+                handleChange={handleChange} />
+            <Label text='Contraseña' estilo='Label-text'/>
+            { passwordError && 
+                <Label 
+                    text='¡Contraseña incompleta minimo 6 caracteres!' 
+                    estilo='label-error'/>
+            }
+            <Input 
+                atribbute={clave}
+                handleChange={handleChange}
+                param={passwordError} />
+            <div className='login-boton'>
+                <button onClick={handleSubmit}>
+                    Ingresar
+                </button>
+            </div>
         </div>
     )
 }

@@ -4,7 +4,9 @@ import './Title.css';
 const Title = ({ text }) => {
     return(
         <div className='Title-container'>
-            { text }
+            <h1 className='Title-text'>
+                { text }
+            </h1>
         </div>
     )
 }

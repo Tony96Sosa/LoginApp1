@@ -1,3 +1,16 @@
 .Title-container{
-    background-color: aquamarine;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    box-sizing: border-box;
+    color: seashell;
+}
+.Title-text{
+    margin: 0;
 }

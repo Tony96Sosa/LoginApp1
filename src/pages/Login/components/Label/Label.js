@@ -1,11 +1,13 @@
 import React from 'react';
-// import Title from './components/Title/Title';
+import './Label.css';
 
-const Label = ({ text }) => {
+const Label = ({ text, estilo }) => {
     return(
-        <>
-            { text }
-        </>
+        <div className='Label-container'>
+            <h2 className={estilo}>
+                { text }
+            </h2>
+        </div>
     )
 }
 

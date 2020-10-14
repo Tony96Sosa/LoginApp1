@@ -1,0 +1,28 @@
+.Label-container{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.Label-text{
+    width: 50%;
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+    border: 3px solid seashell;
+    border-radius: 5px;
+    border-bottom: none;
+    color: seashell;
+    background-color: skyblue;
+}
+.label-error{
+    background-color: #ad2424;
+    font-size: 20px;
+    color: #c4b1be;
+    text-align: center;
+    margin: 0;
+    border: 2px solid rosybrown;;
+    border-radius: 5px;
+}
